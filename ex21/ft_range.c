@@ -31,10 +31,10 @@ int	*ft_range(int min, int max)
 	}
 	return (range);
 }
-
+/*
 #include <stdio.h>
 int main()
 {
 	printf("RANGE = %d\n", ft_range(10, 20)[0]);
 }
-
+*/

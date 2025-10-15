@@ -1,50 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lluiggi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 15:21:44 by lluiggi           #+#    #+#             */
-/*   Updated: 2025/10/13 15:22:05 by lluiggi          ###   ########.fr       */
+/*   Created: 2025/10/13 15:09:04 by lluiggi           #+#    #+#             */
+/*   Updated: 2025/10/14 17:38:41 by lluiggi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strl(char *str)
+void	ft_swap(int *a, int *b)
 {
-	int	i;
+	int	c;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	char	*copy;
-	int		i;
-	int		size;
-
-	i = 0;
-	size = ft_strl(src);
-	copy = (char *)malloc(size + 1);
-	if (!copy)
-		return (NULL);
-	while (src[i])
-	{
-		copy[i] = src[i];
-		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
+	c = *a;
+	*a = *b;
+	*b = c;
 }
 /*
 #include <stdio.h>
 int main()
 {
-           printf("CA COPIE BIEN DRR : %s\n", ft_strdup("HELLO WORLD"));
+int a = 1;
+int b = 2;
+printf("AVANT a = %d, b = %d\n", a, b);
+ft_swap(&a, &b);
+printf("a = %d, b = %d\n", a, b);
+return 0;
 }
 */

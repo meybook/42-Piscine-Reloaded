@@ -1,50 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lluiggi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 15:21:44 by lluiggi           #+#    #+#             */
-/*   Updated: 2025/10/13 15:22:05 by lluiggi          ###   ########.fr       */
+/*   Created: 2025/10/13 15:18:16 by lluiggi           #+#    #+#             */
+/*   Updated: 2025/10/14 17:38:11 by lluiggi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strl(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	char	*copy;
-	int		i;
-	int		size;
-
-	i = 0;
-	size = ft_strl(src);
-	copy = (char *)malloc(size + 1);
-	if (!copy)
-		return (NULL);
-	while (src[i])
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 	{
-		copy[i] = src[i];
 		i++;
 	}
-	copy[i] = '\0';
-	return (copy);
+	return (s1[i] - s2[i]);
 }
+
 /*
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-           printf("CA COPIE BIEN DRR : %s\n", ft_strdup("HELLO WORLD"));
+	printf("compare : %d \n", ft_strcmp("abcd", "abcd"));
 }
 */

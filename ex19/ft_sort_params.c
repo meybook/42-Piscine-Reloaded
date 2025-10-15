@@ -10,7 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -18,9 +30,7 @@ int	ft_strcmp(char *s1, char *s2)
 
 	i = 0;
 	while (s1[i] && s2[i] && s1[i] == s2[i])
-	{
 		i++;
-	}
 	return (s1[i] - s2[i]);
 }
 
@@ -60,10 +70,10 @@ int	main(int argc, char **argv)
 		j = 0;
 		while (argv[i][j])
 		{
-			write(1, &argv[i][j], 1);
+			ft_putstr(argv[i][j]);
 			j++;
 		}
-		write(1, "\n", 1);
+		ft_putchar('\n');
 		i++;
 	}
 }

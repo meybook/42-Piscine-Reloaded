@@ -10,13 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
+void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {
@@ -25,6 +19,8 @@ void	ft_is_negative(int n)
 	else
 		ft_putchar('P');
 }
+/*
+#include <unistd.h>
 
 int main()
 {
@@ -34,3 +30,4 @@ int main()
         ft_is_negative(10000);
 
 }
+*/

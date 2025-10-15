@@ -6,15 +6,11 @@
 /*   By: lluiggi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:33:15 by lluiggi           #+#    #+#             */
-/*   Updated: 2025/10/13 14:50:12 by lluiggi          ###   ########.fr       */
+/*   Updated: 2025/10/14 18:09:20 by lluiggi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
-void	ft_putchar(char c)
-{
-        write (1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
@@ -27,8 +23,9 @@ void	ft_print_alphabet(void)
 		c++;
 	}
 }
-
+/*
 int main()
 {
 	ft_print_alphabet();
 }
+*/

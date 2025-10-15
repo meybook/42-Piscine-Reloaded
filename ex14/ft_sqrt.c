@@ -21,7 +21,7 @@ int	ft_sqrt(int nb)
 		return (i);
 	return (0);
 }
-
+/*
 #include <stdio.h>
 
 int main()
@@ -31,4 +31,4 @@ int main()
         printf("RACINE CARRE DE 0 : %d\n", ft_sqrt(0));
         printf("RACINE CARRE DE 2525 : %d\n", ft_sqrt(2525));
 }
-
+*/

@@ -15,7 +15,7 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	*div = a / b;
 	*mod = a % b;
 }
-
+/*
 #include <stdio.h>
 int main ()
 {
@@ -25,4 +25,4 @@ int main ()
 	printf("egal a : %d\n reste : %d\n", div, mod);
 	return 0;
 }
-
+*/

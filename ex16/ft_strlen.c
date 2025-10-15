@@ -16,15 +16,13 @@ int	ft_strlen(char *str)
 
 	i = 0;
 	while (str[i])
-	{
 		i++;
-	}
 	return (i);
 }
-
+/*
 #include <stdio.h>
 int main()
 {
 	printf("il y a %d de caracteres\n", ft_strlen("je fais un test"));
 }
-
+*/

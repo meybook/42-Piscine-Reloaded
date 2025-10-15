@@ -10,23 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
-int	main(int argc, char **argv)
+void	ft_putstr(char *str)
 {
 	int	i;
-	int	j;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	while (str[i])
 	{
-		j = 0;
-		while (argv[i][j])
-		{
-			write(1, &argv[i][j], 1);
-			j++;
-		}
-		write (1, "\n", 1);
+		ft_putchar(str[i]);
 		i++;
 	}
+}
+
+int	main(int ac, char **av)
+{
+	int	i;
+
+	i = 1;
+	while (i < ac)
+	{
+		ft_putstr(av[i]);
+		ft_putchar('\n');
+		i++;
+	}
+	return (0);
 }
