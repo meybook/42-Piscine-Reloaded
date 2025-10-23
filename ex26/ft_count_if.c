@@ -25,7 +25,7 @@ int	is_start_uppercase(char *str)
 
 int	main(void)
 {
-	char	*tab[] = {"Salut", "je", "Suis", "a", "lecole", "a19", "A42", NULL};
+	char	*tab[] = {"Salut", "je", "Suis", "a", "lecole", "a", "A42", NULL};
 	int	result = (ft_count_if(tab, &is_start_uppercase));
 	printf("res : %d\n", result);
 }
